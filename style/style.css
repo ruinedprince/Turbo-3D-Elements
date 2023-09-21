@@ -2,23 +2,37 @@
     border: 1px solid red;
 }*/
 
+
+/*Puxando a fonte de fonts/ para a página*/
+
+@font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald-Regular.ttf);
+}
+
 body{
     padding-top: 100px;
     background-color: rgb(22, 13, 70);
+    font-family: Oswald;
+}
+
+container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a{
     color: rgb(168, 168, 168);
 }
 
-ul{
+#c1 ul{
     position: relative;
     display: flex;
-    transform-style: preserve-3d;
-    transform: rotate(-25deg) skew(25deg);
+    transform: rotate(-15deg) skewX(45deg);
 }
 
-li{
+#c1 li{
     position: relative;
     list-style: none;
     width: 3.75rem;
@@ -26,33 +40,30 @@ li{
     margin: 0 1.25rem;
 }
 
-li:before{
+#c1 li:before{
     background-color: #2a2a2a;
-    color: #2a2a2a;
-    content: ".";
+    content: "";
     position: absolute;
     bottom: -0.625rem;
     left: 0;
     width: 100%;
     height: 0.625rem;
     transform-origin: top;
-    transform: skewX(-41deg);
+    transform: skewX(-50deg);
 }
 
-li:after{
-    background-color: #2a2a2a;
-    color: #2a2a2a;
-    content: ".";
+#c1 li:after{
+    background-color: #e9e9e9;
+    content: "";
     position: absolute;
     top: 0;
     left: -0.625rem;;
     width: 0.625rem;;
     height: 100%;
-    transform-origin: right;
-    transform: skewY(-41deg);
+    transform: skewY(-50deg);
 }
 
-li span{
+#c1 li span{
     background-color: #696868;
     position: absolute;
     top: 0;
@@ -66,30 +77,109 @@ li span{
     transition: 1s;
 }
 
-li:hover span{
+#c1 li:hover span{
     z-index: 10;
     color: white;
     box-shadow: -0.063rem 0.063rem 0.063rem rgba(0, 0, 0, 0.5);
     background: var(--cor);
 }
 
-li:hover span:nth-child(5){
+#c1 li:hover span:nth-child(5){
     transform: translate(4vh, -4vh);
     opacity: 1;
 }
-li:hover span:nth-child(4){
+#c1 li:hover span:nth-child(4){
     transform: translate(3vh, -3vh);
     opacity: 0.8;
 }
-li:hover span:nth-child(3){
+#c1 li:hover span:nth-child(3){
     transform: translate(2vh, -2vh);
     opacity: 0.6;
 }
-li:hover span:nth-child(2){
+#c1 li:hover span:nth-child(2){
     transform: translate(1vh, -1vh);
     opacity: 0.4;
 }
-li:hover span:nth-child(1){
+#c1 li:hover span:nth-child(1){
     transform: translate(0, 0);
     opacity: 0.2;
+}
+
+#c2{
+    margin-top: 6.25rem;
+}
+
+#c2 ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+
+#c2 li{
+    background-color: #696868;
+    position: relative;
+    list-style: none;
+    width: 12.5rem;
+    padding: 0.938rem;
+    z-index: calc(1 * var(--camada));
+    transition: 1s;
+}
+
+#c2 li:hover{
+    background-color: #d32f2f;
+    transform: translateX(-3.125rem);
+}
+
+#c2 li:before{
+    background-color: #2a2a2a;
+    font-family: "FontAwesome";
+    content: attr(data-icon);
+    color: rgb(168, 168, 168);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: -2.5rem;
+    width: 2.5rem;
+    height: 100%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 1s;
+}
+
+#c2 li:hover:before{
+    background-color: #630707;
+}
+
+#c2 li:after{
+    background-color: #424141;
+    content: "";
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    width: 100%;
+    height: 2.5rem;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 1s;
+}
+
+#c2 li:hover:after{
+    background: #8b3737;
+}
+
+#c2 li a{
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    transition: 1s;
+}
+
+#c2 li:hover a{
+    color: white;
+}
+
+#c2 li:last-child:after{
+    box-shadow: -7.5rem 7.5rem 0.25rem rgba(0, 0, 0, 0.25)
 }
