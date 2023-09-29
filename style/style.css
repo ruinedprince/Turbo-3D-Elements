@@ -2,9 +2,7 @@
     border: 1px solid red;
 }*/
 
-
 /*Puxando a fonte de fonts/ para a página*/
-
 @font-face {
     font-family: Oswald;
     src: url(fonts/Oswald-Regular.ttf);
@@ -14,10 +12,6 @@ body{
     background-color: rgb(22, 13, 70);
     font-family: Oswald;
     padding-top: 100px;
-}
-
-container{
-    padding-top: 5rem;
 }
 
 #c1{
@@ -113,6 +107,7 @@ container{
     align-items: center;
     display: flex;
     justify-content: center;
+    padding-top: 12rem;
 }
 
 #c2 a{
@@ -195,5 +190,79 @@ container{
 }
 
 #c3{
+    align-items: center;
     display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-container{
+    display: grid;
+    gap: 1.875rem;
+    grid-template-columns: auto 12.5rem 12.5rem 12.5rem auto;
+    height: 4.688rem;
+    position: relative;
+    width: 100%;
+    transform: skewY(-15deg);
+}
+
+.slider-main-container, .slider-magnifier-container{
+    align-items: flex-start;
+    color: #424141;
+    display: flex;
+    font-size: 2.188rem;
+    height: 4.688rem;
+    position: absolute;
+    width: 12.5rem;
+}
+
+.slider-magnifier-container{
+    font-size: 2.813rem;
+    font-weight: 800;
+    height: 4.688rem;
+    overflow: hidden;
+}
+
+.hr {
+    grid-column: 2;
+}
+
+.mn {
+    grid-column: 3;
+}
+
+.sc {
+    grid-column: 4;
+}
+
+.slider-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.slider{
+    position: absolute;
+    text-align: center;
+    width: 4.688rem;
+}
+
+.slider-magnifier-container .slider{
+    background-color: #696868;
+    color: black;
+    z-index: 1;
+}
+
+.slider-magnifier-container:before .slider:before{
+    background-color: #696868;
+    color: black;
+    z-index: 1;
+}
+
+.main-container p{
+    display: block;
+    line-height: 4.688rem;
+    margin: 0;
 }
